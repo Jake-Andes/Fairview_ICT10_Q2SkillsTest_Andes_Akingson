@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Student Clubs — ICT 10</title>
+    <link rel="stylesheet" href="https://pyscript.net/releases/2024.1.1/core.css">
+    <script type="module" src="https://pyscript.net/releases/2024.1.1/core.js"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        :root{
+            --maroon: #6a0d0d;
+            --maroon-dark: #3e0606;
+            --gold: #d4af37;
+            --gold-soft: #f2e6b8;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background: radial-gradient(circle at 10% 10%, #f7e7e7 0%, #f3eded 30%, #efe7e7 100%);
+            padding: 40px;
+            color: var(--maroon-dark);
+        }
+
+        .club-wrapper {
+            max-width: 480px;
+            margin: 0 auto;
+            text-align: center;
+            background: linear-gradient(180deg, rgba(106,13,13,0.06), rgba(212,175,55,0.02));
+            border: 2px solid rgba(212,175,55,0.18);
+            padding: 20px;
+            border-radius: 12px;
+            box-shadow: 0 8px 24px rgba(0,0,0,0.08);
+        }
+
+        h1 {
+            margin: 8px 0 16px;
+            color: var(--maroon);
+            font-weight: 800;
+            letter-spacing: 0.4px;
+        }
+
+        label[for="clubs"] {
+            display: block;
+            margin-top: 8px;
+            font-weight: 700;
+            color: var(--maroon-dark);
+        }
+
+        #clubs, .club-select {
+            display: block;
+            width: 100%;
+            max-width: 360px;
+            margin: 12px auto 0 auto;
+            padding: 10px 14px;
+            border: 2px solid var(--gold);
+            border-radius: 8px;
+            background: #fff;
+            color: var(--maroon-dark);
+            box-shadow: 0 6px 14px rgba(0,0,0,0.06);
+            -webkit-appearance: none;
+            appearance: none;
+            font-weight: 600;
+            text-align: left;
+        }
+
+        #clubs:focus, .club-select:focus {
+            outline: none;
+            box-shadow: 0 0 0 6px rgba(212,175,55,0.08);
+        }
+
+        .btn-club {
+            display: inline-block;
+            margin: 18px auto 0;
+            padding: 10px 22px;
+            background: var(--gold);
+            color: var(--maroon-dark);
+            border: 0;
+            border-radius: 8px;
+            font-weight: 700;
+            box-shadow: 0 6px 14px rgba(0,0,0,0.08);
+            cursor: pointer;
+        }
+
+        .btn-club:hover {
+            background: #c99f2e;
+        }
+        
+        #clubInfo {
+            margin-top: 14px;
+            padding: 12px;
+            background: linear-gradient(180deg, rgba(212,175,55,0.06), rgba(255,255,255,0.85));
+            border: 1px solid rgba(212,175,55,0.12);
+            color: var(--maroon-dark);
+            border-radius: 8px;
+            white-space: pre-wrap;
+            text-align: left;
+            max-width: 420px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        @media (max-width: 576px) {
+            .club-wrapper { padding: 12px; }
+            #clubs, .club-select { max-width: 100%; }
+            .btn-club { width: 100%; max-width: 360px; }
+        }
+    </style>
+</head>
+<body>
+    <div class="club-wrapper">
+        <h1>Select Your Club</h1>
+
+        <label for="clubs">Choose a Club</label>
+        <select name="Club" id="clubs" class="club-select">
+            <option value="Math Club">Math Club</option>
+            <option value="SS">Social Studies Club</option>
+            <option value="Science">Science Club</option>
+            <option value="Band">Band Club</option>
+            <option value="Coms-Art">Coms Art Club</option>
+            <option value="VB">Volleyball Club</option>
+        </select>
+
+        <button id="showClub" class="btn-club">Show Club Information</button>
+
+        <div id="clubInfo"></div>
+    </div>
+
+    <script type="py" src="skilltestQ2.py"></script>
+</body>
+</html>
